@@ -25,23 +25,23 @@ let brush = 1;
 const blackBrush = document.querySelector("#blackBrush");
 blackBrush.addEventListener("click", () => {
     brush = 0;
-    blackBrush.style.background = "#a9c0a6";
-    rainbowBrush.style.background = "#e0cdbe";
-    eraser.style.background ="#e0cdbe";
+    blackBrush.style.background = "hsl(149, 100%, 51%)";
+    rainbowBrush.style.background = "#B5FFD9";
+    eraser.style.background ="#B5FFD9";
 });
 const rainbowBrush = document.querySelector("#rainbowBrush");
 rainbowBrush.addEventListener("click", () => {
     brush = 1;
-    blackBrush.style.background = "#e0cdbe";
-    rainbowBrush.style.background = "#a9c0a6";
-    eraser.style.background ="#e0cdbe";
+    blackBrush.style.background = "#B5FFD9";
+    rainbowBrush.style.background = "hsl(149, 100%, 51%)";
+    eraser.style.background ="#B5FFD9";
 });
 const eraser = document.querySelector("#eraser");
 eraser.addEventListener("click", () => {
     brush = 2;
-    blackBrush.style.background = "#e0cdbe";
-    rainbowBrush.style.background = "#e0cdbe";
-    eraser.style.background ="#a9c0a6";
+    blackBrush.style.background = "#B5FFD9";
+    rainbowBrush.style.background = "#B5FFD9";
+    eraser.style.background ="hsl(149, 100%, 51%)";
 });
 
 paintCanvas();
