@@ -19,7 +19,7 @@ body{
     border-bottom: 4px solid #edca82;
 }
 
-button, #slider{
+.buttons{
     margin: 40px;
     padding: 10px;
     font-size: 1.2rem;
@@ -29,6 +29,35 @@ button, #slider{
     transition: 0.09s;
     cursor:pointer;
     background: #e0cdbe;
+}
+
+p{
+    height: 20px;
+    min-width:85px;
+}
+
+#slider{
+    display: flex;
+    align-items: center;
+    
+}
+
+.slider{
+    cursor: pointer;
+    margin-right:5px;
+}
+
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+
+#reset{
+    font-size: 1.2rem;
+    transition: 0.09s;
+    border: none;
+    cursor:pointer;
+    background: #e0cdbe;
+    margin-left: 10px;
 }
 
 button:hover{
