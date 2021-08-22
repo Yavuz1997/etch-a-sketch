@@ -2,27 +2,37 @@ html{
     font-size: 16px;
 }
 
+body{
+    background: #097770;
+}
+
 #buttons{
     display:flex;
     width:100vw;
     justify-content: center;
     align-items: center;
-    height:20vh;
+    height:10vh;
+    margin-top:5vh;
+    margin-bottom: 5vh;
+    background: #a9c0a6;
+    border-top: 4px solid #edca82;
+    border-bottom: 4px solid #edca82;
 }
 
-button{
+button, #slider{
     margin: 40px;
     padding: 10px;
     font-size: 1.2rem;
     border-radius: 15px;
     border: 3px solid;
+    border-color: #edca82;
     transition: 0.09s;
     cursor:pointer;
-    background: palegoldenrod;
+    background: #e0cdbe;
 }
 
 button:hover{
-    background-color: #10e24f;
+    background-color: #edca82;
     transform:scale(1.1); 
 }
 
@@ -41,7 +51,7 @@ button:active{
     flex-wrap: wrap;
     width: 700px;
     height: 700px;
-    border: 3px solid;
+    border: 3px solid #edca82;
 }
 
 .box{

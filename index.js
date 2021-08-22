@@ -58,8 +58,7 @@ function createCells(numberOfCells, side, canvas) {
     });
 }
 function resetCells() {
-    let className = "box"
-    const elements = document.getElementsByClassName(className);
+    const elements = document.getElementsByClassName("box");
     while (elements.length > 0) {
         elements[0].parentNode.removeChild(elements[0]);
     }
