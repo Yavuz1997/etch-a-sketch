@@ -1,6 +1,20 @@
 let canvas = document.querySelector("#canvas");
-let numberOfCells = 32;
+
+let numberOfCells = 50;
 let side = 700 / numberOfCells;
+var slider = document.getElementById("cellNumber");
+var output = document.getElementById("sliderValue");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+    output.innerHTML = this.value;
+    numberOfCells = this.value;
+    side = 700 / numberOfCells;
+}
+
+
+
 
 createCells(numberOfCells, side, canvas);
 
@@ -16,7 +30,10 @@ const rainbowBrush = document.querySelector("#rainbowBrush");
 rainbowBrush.addEventListener("click", () => {
     brush = 1;
 });
-
+const eraser = document.querySelector("#eraser");
+eraser.addEventListener("click", () => {
+    brush = 2;
+});
 paintCanvas();
 
 function paintCanvas() {
@@ -31,6 +48,9 @@ function paint(e) {
     }
     if (brush == 1) {
         this.style.background = getRandomColor();
+    }
+    if (brush == 2){
+        this.style.background = "white";
     }
 }
 function getRandomColor() {
