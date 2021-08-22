@@ -1,5 +1,5 @@
 let canvas = document.querySelector("#canvas");
-let numberOfCells = 64;
+let numberOfCells = 32;
 let side = 500/numberOfCells;
 
 
@@ -21,9 +21,22 @@ cells.forEach((cell)=>{
 });
 
 cells.forEach((cell) => {
-    cell.addEventListener("mouseover", () => {
-        cell.style.background= "black";
-    })
+    cell.addEventListener("mouseover",paintRaibow)
 });
 
-    
+function paintBlack(e){
+    this.style.background= "black";
+}
+
+function paintRaibow(e){
+    this.style.background= getRandomColor();
+}
+
+function getRandomColor() {
+    let letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
