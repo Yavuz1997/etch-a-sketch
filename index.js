@@ -25,15 +25,25 @@ let brush = 1;
 const blackBrush = document.querySelector("#blackBrush");
 blackBrush.addEventListener("click", () => {
     brush = 0;
+    blackBrush.style.background = "#a9c0a6";
+    rainbowBrush.style.background = "#e0cdbe";
+    eraser.style.background ="#e0cdbe";
 });
 const rainbowBrush = document.querySelector("#rainbowBrush");
 rainbowBrush.addEventListener("click", () => {
     brush = 1;
+    blackBrush.style.background = "#e0cdbe";
+    rainbowBrush.style.background = "#a9c0a6";
+    eraser.style.background ="#e0cdbe";
 });
 const eraser = document.querySelector("#eraser");
 eraser.addEventListener("click", () => {
     brush = 2;
+    blackBrush.style.background = "#e0cdbe";
+    rainbowBrush.style.background = "#e0cdbe";
+    eraser.style.background ="#a9c0a6";
 });
+
 paintCanvas();
 
 function paintCanvas() {
@@ -45,21 +55,12 @@ function paintCanvas() {
 function paint(e) {
     if (brush == 0) {
         this.style.background = "black";
-        blackBrush.style.background = "#a9c0a6";
-        rainbowBrush.style.background = "#e0cdbe";
-        eraser.style.background ="#e0cdbe";
     }
     if (brush == 1) {
         this.style.background = getRandomColor();
-        blackBrush.style.background = "#e0cdbe";
-        rainbowBrush.style.background = "#a9c0a6";
-        eraser.style.background ="#e0cdbe";
     }
     if (brush == 2){
         this.style.background = "white";
-        blackBrush.style.background = "#e0cdbe";
-        rainbowBrush.style.background = "#e0cdbe";
-        eraser.style.background ="#a9c0a6";
     }
 }
 function getRandomColor() {
