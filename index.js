@@ -1,6 +1,6 @@
 let canvas = document.querySelector("#canvas");
 
-let numberOfCells = 50;
+let numberOfCells = 25;
 let side = 700 / numberOfCells;
 var slider = document.getElementById("cellNumber");
 var output = document.getElementById("sliderValue");
@@ -45,12 +45,21 @@ function paintCanvas() {
 function paint(e) {
     if (brush == 0) {
         this.style.background = "black";
+        blackBrush.style.background = "#a9c0a6";
+        rainbowBrush.style.background = "#e0cdbe";
+        eraser.style.background ="#e0cdbe";
     }
     if (brush == 1) {
         this.style.background = getRandomColor();
+        blackBrush.style.background = "#e0cdbe";
+        rainbowBrush.style.background = "#a9c0a6";
+        eraser.style.background ="#e0cdbe";
     }
     if (brush == 2){
         this.style.background = "white";
+        blackBrush.style.background = "#e0cdbe";
+        rainbowBrush.style.background = "#e0cdbe";
+        eraser.style.background ="#a9c0a6";
     }
 }
 function getRandomColor() {
